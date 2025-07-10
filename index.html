@@ -1,2 +1,307 @@
-surgery
-🔓
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlocking Truth - Global Reconstructive Surgery</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔓</text></svg>">
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .email-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            max-width: 500px;
+        }
+
+        .header-text {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            color: #ffffff;
+            font-size: 16px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        .icon-container {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 30px auto;
+            display: inline-block;
+        }
+
+        .icon-container:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+        }
+
+        .icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            overflow: hidden;
+        }
+
+        .icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 49%, rgba(255,255,255,0.2) 50%, transparent 51%);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%); }
+            100% { transform: translateX(100%) translateY(100%); }
+        }
+
+        .icon-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .key-symbol {
+            font-size: 40px;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-3px); }
+        }
+
+        .lock-accent {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        .lock-accent::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 3px;
+            height: 3px;
+            background: #ffffff;
+            border-radius: 50%;
+        }
+
+        .medical-cross {
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            width: 14px;
+            height: 14px;
+            position: relative;
+            opacity: 0.6;
+        }
+
+        .medical-cross::before,
+        .medical-cross::after {
+            content: '';
+            position: absolute;
+            background: #ffffff;
+        }
+
+        .medical-cross::before {
+            width: 2px;
+            height: 14px;
+            left: 6px;
+            top: 0;
+        }
+
+        .medical-cross::after {
+            width: 14px;
+            height: 2px;
+            left: 0;
+            top: 6px;
+        }
+
+        .app-label {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 10px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .cta-text {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 20px;
+            opacity: 0.9;
+        }
+
+        .click-instruction {
+            color: #ffffff;
+            font-size: 14px;
+            margin-top: 10px;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .pulse {
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(79, 172, 254, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(79, 172, 254, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(79, 172, 254, 0); }
+        }
+
+        .footer-text {
+            color: #ffffff;
+            font-size: 12px;
+            margin-top: 25px;
+            opacity: 0.7;
+            line-height: 1.4;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            .email-container {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            
+            .header-text {
+                font-size: 20px;
+            }
+            
+            .icon {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .key-symbol {
+                font-size: 32px;
+            }
+        }
+
+        /* PWA optimizations */
+        @media (display-mode: standalone) {
+            body {
+                padding-top: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header-text">Unlocking Truth</div>
+        <div class="subtitle">Discover the reality of global reconstructive surgery</div>
+        
+        <div class="icon-container" onclick="navigateToWebsite()" role="button" tabindex="0" aria-label="Visit Global Reconstructive Surgery website">
+            <div class="icon pulse">
+                <div class="icon-content">
+                    <div class="key-symbol">🔓</div>
+                </div>
+                <div class="lock-accent"></div>
+                <div class="medical-cross"></div>
+            </div>
+            <div class="app-label">Unlocking Truth</div>
+        </div>
+        
+        <div class="cta-text">Tap to Enter</div>
+        <div class="click-instruction">Click the icon above to visit our website</div>
+        
+        <div class="footer-text">
+            Experience transformative medical care and learn about<br>
+            life-changing reconstructive surgery opportunities worldwide.
+        </div>
+    </div>
+
+    <script>
+        function navigateToWebsite() {
+            // Add visual feedback
+            const icon = document.querySelector('.icon');
+            icon.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                icon.style.transform = 'scale(1)';
+                // Navigate to the main website
+                window.open('https://www.globalreconstructivesurgery.org', '_blank');
+            }, 150);
+        }
+
+        // Add touch feedback for mobile devices
+        const iconContainer = document.querySelector('.icon-container');
+        
+        iconContainer.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.95)';
+        });
+        
+        iconContainer.addEventListener('touchend', function() {
+            this.style.transform = 'scale(1)';
+        });
+
+        // Add keyboard accessibility
+        iconContainer.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navigateToWebsite();
+            }
+        });
+
+        // Service Worker for PWA capabilities
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(function(err) {
+                        console.log('ServiceWorker registration failed');
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
